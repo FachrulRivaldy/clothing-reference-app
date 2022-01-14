@@ -1,3 +1,4 @@
+import 'package:clothing_reference_app/signIn.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -9,10 +10,9 @@ class ClothRefApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Clothing Market'),
-      ),
+    return MaterialApp(
+      title: 'Clothing_Marketplace',
+      home: const signIn(),
     );
   }
 }
