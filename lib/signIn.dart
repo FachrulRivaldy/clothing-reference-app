@@ -1,8 +1,9 @@
+
 import 'package:clothing_reference_app/mainMenu.dart';
 import 'package:flutter/material.dart';
 
-class signIn extends StatelessWidget {
-  const signIn({Key? key}) : super(key: key);
+class SignIn extends StatelessWidget {
+  const SignIn({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -10,7 +11,7 @@ class signIn extends StatelessWidget {
       body: Container(
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
-        padding: EdgeInsets.only(left: 55, right: 55),
+        padding: const EdgeInsets.only(left: 55, right: 55),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisAlignment: MainAxisAlignment.center,
@@ -20,8 +21,8 @@ class signIn extends StatelessWidget {
               'assets/images/logo.jpg',
               width: 150,
             ),
-            SizedBox(height: 25),
-            Text(
+            const SizedBox(height: 25),
+            const Text(
               "Welcome!\nLet's Sign You In",
               textAlign: TextAlign.center,
               style: TextStyle(
@@ -29,12 +30,12 @@ class signIn extends StatelessWidget {
                 fontWeight: FontWeight.w700,
               ),
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             TextFormField(
               //email input form
               decoration: InputDecoration(
                 hintText: 'Email',
-                fillColor: Color(0xFFABA6A2),
+                fillColor: const Color(0xFFABA6A2),
                 filled: true,
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(15),
@@ -42,12 +43,12 @@ class signIn extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 25),
+            const SizedBox(height: 25),
             TextFormField(
               //pass input form
               decoration: InputDecoration(
                 hintText: 'Password',
-                fillColor: Color(0xFFABA6A2),
+                fillColor: const Color(0xFFABA6A2),
                 filled: true,
                 border: OutlineInputBorder(
                   borderRadius: BorderRadius.circular(15),
@@ -55,8 +56,8 @@ class signIn extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 10),
-            Align(
+            const SizedBox(height: 10),
+            const Align(
               //Forgot Password
               alignment: Alignment.centerRight,
               child: Text(
@@ -67,7 +68,7 @@ class signIn extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 25),
+            const SizedBox(height: 25),
             InkWell(
               //Sign In button
               onTap: () {
@@ -78,10 +79,10 @@ class signIn extends StatelessWidget {
                 width: MediaQuery.of(context).size.width,
                 height: 50,
                 decoration: BoxDecoration(
-                  color: Color(0xFF2F2E2C),
+                  color: const Color(0xFF2F2E2C),
                   borderRadius: BorderRadius.circular(45),
                 ),
-                child: Center(
+                child: const Center(
                   child: Text(
                     'Sign In',
                     textAlign: TextAlign.center,
@@ -93,7 +94,7 @@ class signIn extends StatelessWidget {
                 ),
               ),
             ),
-            SizedBox(height: 21),
+            const SizedBox(height: 21),
             Row(
               //Account Login
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -103,20 +104,20 @@ class signIn extends StatelessWidget {
                   'assets/images/google.png',
                   width: 50,
                 ),
-                SizedBox(width: 30),
+                const SizedBox(width: 30),
                 Image.asset(
                   'assets/images/logo.jpg',
                   width: 50,
                 ),
               ],
             ),
-            SizedBox(height: 10),
+            const SizedBox(height: 10),
             Row(
               //Sign Up
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
+                const Text(
                   "Doesn't Have Account?  ",
                   style: TextStyle(
                     fontSize: 15,
@@ -124,7 +125,7 @@ class signIn extends StatelessWidget {
                 ),
                 InkWell(
                   onTap: () {},
-                  child: Text(
+                  child: const Text(
                     'Register Here',
                     style: TextStyle(
                       decoration: TextDecoration.underline,
