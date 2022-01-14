@@ -1,5 +1,5 @@
-
 import 'package:clothing_reference_app/mainMenu.dart';
+import 'package:clothing_reference_app/signUp.dart';
 import 'package:flutter/material.dart';
 
 class SignIn extends StatelessWidget {
@@ -124,7 +124,10 @@ class SignIn extends StatelessWidget {
                   ),
                 ),
                 InkWell(
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => signUp()));
+                  },
                   child: const Text(
                     'Register Here',
                     style: TextStyle(
