@@ -10,9 +10,9 @@ class ClothRefApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       title: 'Clothing_Marketplace',
-      home: const signIn(),
+      home: SignIn(),
     );
   }
 }

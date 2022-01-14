@@ -48,9 +48,9 @@ class ProfilePage extends StatelessWidget {
             ),
             Column(
               children: [
-                Align(
+                const Align(
                     alignment: Alignment.centerLeft,
-                    child: const Text("Order History")),
+                    child: Text("Order History")),
                 const SizedBox(
                   height: 20,
                 ),
@@ -103,11 +103,9 @@ class ProfilePage extends StatelessWidget {
                     Text("Arrived"),
                   ],
                 ),
-                Container(
-                  child: InkWell(
-                    child: Text("Edit Profile"),
-                    onTap: () {},
-                  ),
+                InkWell(
+                  child: const Text("Edit Profile"),
+                  onTap: () {},
                 ),
               ],
             )
