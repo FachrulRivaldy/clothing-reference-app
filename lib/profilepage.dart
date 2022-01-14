@@ -32,14 +32,14 @@ class ProfilePage extends StatelessWidget {
                 ),
                 const Text(
                   "Hans Fahrezi",
-                  style: TextStyle(fontSize: 14, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(
                   height: 5,
                 ),
                 const Text(
                   "Member Gold",
-                  style: TextStyle(fontSize: 12),
+                  style: TextStyle(fontSize: 14),
                 ),
                 const SizedBox(
                   height: 50,
@@ -55,12 +55,14 @@ class ProfilePage extends StatelessWidget {
                   height: 20,
                 ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     SizedBox(
                       height: 60,
                       width: 60,
                       child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            primary: const Color(0xFFB7A599)),
                         child: const Icon(Icons.pending_actions),
                         onPressed: () {},
                       ),
@@ -69,6 +71,8 @@ class ProfilePage extends StatelessWidget {
                       height: 60,
                       width: 60,
                       child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            primary: const Color(0xFFB7A599)),
                         child: const Icon(Icons.check_box_outlined),
                         onPressed: () {},
                       ),
@@ -77,6 +81,8 @@ class ProfilePage extends StatelessWidget {
                       height: 60,
                       width: 60,
                       child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            primary: const Color(0xFFB7A599)),
                         child: const Icon(Icons.delivery_dining_sharp),
                         onPressed: () {},
                       ),
@@ -85,6 +91,8 @@ class ProfilePage extends StatelessWidget {
                       height: 60,
                       width: 60,
                       child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
+                            primary: const Color(0xFFB7A599)),
                         child: const Icon(Icons.done_all_rounded),
                         onPressed: () {},
                       ),
@@ -95,17 +103,70 @@ class ProfilePage extends StatelessWidget {
                   height: 5,
                 ),
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: const [
-                    Text("Pending"),
+                    Text("  Pending"),
                     Text("Packed"),
                     Text("On the way"),
-                    Text("Arrived"),
+                    Text("Arrived  "),
                   ],
                 ),
-                InkWell(
-                  child: const Text("Edit Profile"),
-                  onTap: () {},
+                const SizedBox(
+                  height: 50,
+                ),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: InkWell(
+                    child: Container(
+                      width: MediaQuery.of(context).size.width,
+                      decoration: const BoxDecoration(
+                          border: Border(bottom: BorderSide(width: 3))),
+                      child: const Text(
+                        "Edit Profile",
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    onTap: () {},
+                  ),
+                ),
+                const SizedBox(
+                  height: 35,
+                ),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: InkWell(
+                    child: Container(
+                      width: MediaQuery.of(context).size.width,
+                      decoration: const BoxDecoration(
+                          border: Border(bottom: BorderSide(width: 3))),
+                      child: const Text(
+                        "Edit Profile",
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    onTap: () {},
+                  ),
+                ),
+                const SizedBox(
+                  height: 35,
+                ),
+                Align(
+                  alignment: Alignment.centerLeft,
+                  child: InkWell(
+                    child: Container(
+                      width: MediaQuery.of(context).size.width,
+                      decoration: const BoxDecoration(
+                          border: Border(bottom: BorderSide(width: 3))),
+                      child: const Text(
+                        "Edit Profile",
+                        style: TextStyle(
+                            fontSize: 20, fontWeight: FontWeight.bold),
+                      ),
+                    ),
+                    onTap: () {},
+                  ),
                 ),
               ],
             )
