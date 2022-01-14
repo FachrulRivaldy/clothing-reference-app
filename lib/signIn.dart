@@ -1,3 +1,4 @@
+import 'package:clothing_reference_app/mainMenu.dart';
 import 'package:flutter/material.dart';
 
 class signIn extends StatelessWidget {
@@ -69,7 +70,10 @@ class signIn extends StatelessWidget {
             SizedBox(height: 25),
             InkWell(
               //Sign In button
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => MainMenu()));
+              },
               child: Container(
                 width: MediaQuery.of(context).size.width,
                 height: 50,
