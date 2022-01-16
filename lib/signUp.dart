@@ -1,4 +1,4 @@
-// ignore_for_file: file_names
+// ignore_for_file: file_names, camel_case_types, sized_box_for_whitespace
 
 import 'package:clothing_reference_app/mainMenu.dart';
 import 'package:clothing_reference_app/signIn.dart';
@@ -18,20 +18,20 @@ class _signUpState extends State<signUp> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          backgroundColor: Color(0xFFFAFAFA),
+          backgroundColor: const Color(0xFFFAFAFA),
           elevation: 0,
           leading: GestureDetector(
             onTap: () {
               Navigator.pop(context);
             },
-            child: Icon(
+            child: const Icon(
               Icons.arrow_back_ios_new_rounded,
               size: 25,
               color: Colors.black,
             ),
           ),
           titleSpacing: 0.0,
-          title: Text(
+          title: const Text(
             'Back',
             style: TextStyle(
               color: Colors.black,
@@ -41,7 +41,7 @@ class _signUpState extends State<signUp> {
           ),
         ),
         body: Padding(
-          padding: EdgeInsets.only(left: 55, right: 55),
+          padding: const EdgeInsets.only(left: 55, right: 55),
           child: Container(
             height: MediaQuery.of(context).size.height,
             width: MediaQuery.of(context).size.width,
@@ -50,7 +50,7 @@ class _signUpState extends State<signUp> {
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
+                  const Text(
                     "Lets Create Your Account!",
                     textAlign: TextAlign.center,
                     style: TextStyle(
@@ -59,7 +59,7 @@ class _signUpState extends State<signUp> {
                       fontWeight: FontWeight.w700,
                     ),
                   ),
-                  SizedBox(height: 40),
+                  const SizedBox(height: 40),
                   TextFormField(
                     //email input form
                     decoration: InputDecoration(
@@ -72,7 +72,7 @@ class _signUpState extends State<signUp> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 25),
+                  const SizedBox(height: 25),
                   TextFormField(
                     //Nama Lengkap
                     decoration: InputDecoration(
@@ -85,7 +85,7 @@ class _signUpState extends State<signUp> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 25),
+                  const SizedBox(height: 25),
                   TextFormField(
                     //email input form
                     decoration: InputDecoration(
@@ -98,7 +98,7 @@ class _signUpState extends State<signUp> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 25),
+                  const SizedBox(height: 25),
                   TextFormField(
                     //email input form
                     decoration: InputDecoration(
@@ -111,7 +111,7 @@ class _signUpState extends State<signUp> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 20),
+                  const SizedBox(height: 20),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -124,7 +124,7 @@ class _signUpState extends State<signUp> {
                           });
                         },
                       ),
-                      Text(
+                      const Text(
                         'I accept the terms and conditions',
                         style: TextStyle(
                           fontSize: 15,
@@ -133,12 +133,14 @@ class _signUpState extends State<signUp> {
                       ),
                     ],
                   ),
-                  SizedBox(height: 25),
+                  const SizedBox(height: 25),
                   InkWell(
                     //Sign Up button
                     onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => SignIn()));
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => const SignIn()));
                     },
                     child: Container(
                       width: MediaQuery.of(context).size.width,
@@ -159,7 +161,7 @@ class _signUpState extends State<signUp> {
                       ),
                     ),
                   ),
-                  SizedBox(height: 10),
+                  const SizedBox(height: 10),
                   Row(
                     //Sign Up
                     crossAxisAlignment: CrossAxisAlignment.center,
