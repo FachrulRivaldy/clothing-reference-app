@@ -23,7 +23,7 @@ class ProfilePage extends StatelessWidget {
                   width: 120,
                   height: 120,
                   child: ClipRRect(
-                    borderRadius: BorderRadius.circular(160),
+                    borderRadius: BorderRadius.circular(90),
                     child: Image.asset('assets/images/profpic.jpg'),
                   ),
                 ),
