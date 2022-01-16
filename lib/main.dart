@@ -18,7 +18,7 @@ class ClothRefApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Clothing_Marketplace',
-      home: const CategoryDetails(),
+      home: const SearchTabBar(),
     );
   }
 }

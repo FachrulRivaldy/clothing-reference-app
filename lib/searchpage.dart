@@ -1,29 +1,33 @@
 import 'package:flutter/material.dart';
 
-class SearchPage extends StatefulWidget {
-  const SearchPage({Key? key}) : super(key: key);
+class SearchTabBar extends StatefulWidget {
+  const SearchTabBar({Key? key}) : super(key: key);
 
   @override
-  State<SearchPage> createState() => _SearchPageState();
+  _SearchTabBarState createState() => _SearchTabBarState();
 }
 
-class _SearchPageState extends State<SearchPage> {
+class _SearchTabBarState extends State<SearchTabBar> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.only(top: 50, left: 30, right: 30),
-        child: Center(
-          child: Column(
-            children: [
-              const Text(
-                "Find Your Choice",
-                style: TextStyle(fontSize: 24, fontWeight: FontWeight.w900),
-              ),
-              const SizedBox(
-                height: 25,
-              ),
-              Container(
+    return DefaultTabController(
+      length: 2,
+      child: Scaffold(
+        backgroundColor: const Color(0xFFEBEAEF),
+        appBar: AppBar(
+          title: const Text(
+            'Find Your Choices',
+            style: TextStyle(color: Colors.black, fontWeight: FontWeight.w900),
+          ),
+          backgroundColor: const Color(0xFFEBEAEF),
+          elevation: 0,
+          centerTitle: true,
+        ),
+        body: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(left: 30, right: 30),
+              child: Container(
                 width: double.infinity,
                 height: 45,
                 decoration: BoxDecoration(
@@ -40,49 +44,54 @@ class _SearchPageState extends State<SearchPage> {
                             hintText: "Search...",
                             border: InputBorder.none))),
               ),
-              const SizedBox(
-                height: 25,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        primary: const Color(0xFFABA6A2),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10)),
-                        minimumSize: const Size(155, 40)),
-                    child: const Text(
-                      "Grid",
-                      style: TextStyle(fontSize: 24, color: Colors.black),
-                    ),
-                    onPressed: () {},
-                  ),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        primary: const Color(0xFF2F2E2C),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10)),
-                        minimumSize: const Size(155, 40)),
-                    child: const Text(
-                      "List",
-                      style: TextStyle(fontSize: 24),
-                    ),
-                    onPressed: () {},
-                  ),
-                ],
-              ),
-              Expanded(
-                child: ListView(
-                  children: const [
-                    ListViewCard(),
-                    ListViewCard(),
-                    ListViewCard(),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 70, vertical: 20),
+              child: Container(
+                height: 40,
+                decoration: BoxDecoration(
+                    color: const Color(0xFFABA6A2),
+                    borderRadius: BorderRadius.circular(10)),
+                child: TabBar(
+                  unselectedLabelColor: Colors.black,
+                  labelColor: const Color(0xFFE7E3E2),
+                  labelStyle: const TextStyle(
+                      fontSize: 15, fontWeight: FontWeight.bold),
+                  indicator: BoxDecoration(
+                      color: const Color(0xFF2F2E2C),
+                      borderRadius: BorderRadius.circular(10)),
+                  tabs: const [
+                    Tab(text: 'Grid'),
+                    Tab(
+                      text: 'List',
+                    )
                   ],
                 ),
-              )
-            ],
-          ),
+              ),
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height / 1.5,
+              width: MediaQuery.of(context).size.width / 1.125,
+              child: TabBarView(
+                children: [
+                  Expanded(
+                    child: ListView(
+                      children: const [ListViewCard(), ListViewCard()],
+                    ),
+                  ),
+                  Expanded(
+                    child: ListView(
+                      children: const [
+                        ListViewCard(),
+                        ListViewCard(),
+                        ListViewCard()
+                      ],
+                    ),
+                  )
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );
