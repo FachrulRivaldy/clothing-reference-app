@@ -35,62 +35,16 @@ class CategoryDetails extends StatelessWidget {
         padding: const EdgeInsets.only(top: 20, left: 30, right: 30),
         child: Center(
           child: Column(
-            children: [
-              const Text(
-                "Find Your Choice",
+            children: const [
+              Text(
+                "Category Name",
                 style: TextStyle(fontSize: 24, fontWeight: FontWeight.w900),
               ),
-              const SizedBox(
+              SizedBox(
                 height: 25,
               ),
-              Container(
-                width: double.infinity,
-                height: 45,
-                decoration: BoxDecoration(
-                    color: const Color(0xFFE7E3E2),
-                    borderRadius: BorderRadius.circular(5)),
-                child: Center(
-                    child: TextField(
-                        decoration: InputDecoration(
-                            prefixIcon: const Icon(Icons.search),
-                            suffixIcon: IconButton(
-                              icon: const Icon(Icons.clear),
-                              onPressed: () {},
-                            ),
-                            hintText: "Search...",
-                            border: InputBorder.none))),
-              ),
-              const SizedBox(
+              SizedBox(
                 height: 25,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        primary: const Color(0xFFABA6A2),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10)),
-                        minimumSize: const Size(155, 40)),
-                    child: const Text(
-                      "Grid",
-                      style: TextStyle(fontSize: 24, color: Colors.black),
-                    ),
-                    onPressed: () {},
-                  ),
-                  ElevatedButton(
-                    style: ElevatedButton.styleFrom(
-                        primary: const Color(0xFF2F2E2C),
-                        shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(10)),
-                        minimumSize: const Size(155, 40)),
-                    child: const Text(
-                      "List",
-                      style: TextStyle(fontSize: 24),
-                    ),
-                    onPressed: () {},
-                  ),
-                ],
               ),
             ],
           ),
