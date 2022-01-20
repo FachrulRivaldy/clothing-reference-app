@@ -1,7 +1,7 @@
 // ignore_for_file: file_names, camel_case_types, sized_box_for_whitespace
 
-import 'package:clothing_reference_app/mainMenu.dart';
-import 'package:clothing_reference_app/signIn.dart';
+import 'package:clothing_reference_app/pages/mainMenu.dart';
+import 'package:clothing_reference_app/pages/signIn.dart';
 import 'package:flutter/material.dart';
 
 class signUp extends StatefulWidget {
