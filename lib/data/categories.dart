@@ -4,9 +4,10 @@ List bajuPria = [
   {
     'name': '',
     'category': '',
-    'stars': '',
-    'price': '',
+    'stars': '4',
+    'price': '250,00',
     'desc': '',
+    'image': 'assets/images/BajuPria/contoh1.png',
   },
   {
     'name': '',
