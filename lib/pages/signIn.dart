@@ -1,6 +1,6 @@
 // ignore_for_file: file_names, prefer_const_constructors
 
-import 'package:clothing_reference_app/mainMenu.dart';
+import 'package:clothing_reference_app/pages/mainMenu.dart';
 import 'package:flutter/material.dart';
 
 class SignIn extends StatelessWidget {

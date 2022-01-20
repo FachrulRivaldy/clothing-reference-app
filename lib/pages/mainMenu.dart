@@ -1,6 +1,6 @@
 // ignore_for_file: file_names, sized_box_for_whitespace
 
-import 'package:clothing_reference_app/categorydetails.dart';
+import 'package:clothing_reference_app/pages/categorydetails.dart';
 import 'package:flutter/material.dart';
 
 class MainMenu extends StatelessWidget {

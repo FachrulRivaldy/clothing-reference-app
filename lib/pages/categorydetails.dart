@@ -1,4 +1,4 @@
-import 'package:clothing_reference_app/mainMenu.dart';
+import 'package:clothing_reference_app/pages/mainMenu.dart';
 import 'package:flutter/material.dart';
 
 class CategoryDetails extends StatelessWidget {
