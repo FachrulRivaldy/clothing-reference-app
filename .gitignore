@@ -33,7 +33,6 @@ build/
 web/
 windows/
 
-pubspec.lock
 doc/api/
 
 # Web related

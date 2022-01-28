@@ -1,3 +1,6 @@
+// ignore_for_file: file_names, sized_box_for_whitespace
+
+import 'package:clothing_reference_app/pages/categorydetails.dart';
 import 'package:flutter/material.dart';
 
 class MainMenu extends StatelessWidget {
@@ -7,7 +10,7 @@ class MainMenu extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFFFAFAFA),
+        backgroundColor: const Color(0xFFFAFAFA),
         elevation: 0,
         centerTitle: true,
         title: const Text(
@@ -15,12 +18,12 @@ class MainMenu extends StatelessWidget {
           style: TextStyle(
             fontSize: 25,
             color: Colors.black,
-            fontWeight: FontWeight.w600,
+            fontWeight: FontWeight.w700,
           ),
         ),
       ),
       body: Padding(
-        padding: EdgeInsets.only(left: 40, right: 40, top: 10),
+        padding: const EdgeInsets.only(left: 40, right: 40, top: 10),
         child: Container(
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
@@ -39,7 +42,7 @@ class MainMenu extends StatelessWidget {
                           borderRadius: BorderRadius.circular(15),
                         ),
                       ),
-                      SizedBox(width: 20),
+                      const SizedBox(width: 20),
                       Container(
                         height: 130,
                         width: 250,
@@ -48,7 +51,7 @@ class MainMenu extends StatelessWidget {
                           borderRadius: BorderRadius.circular(15),
                         ),
                       ),
-                      SizedBox(width: 20),
+                      const SizedBox(width: 20),
                       Container(
                         height: 130,
                         width: 250,
@@ -60,8 +63,8 @@ class MainMenu extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 20),
-                Align(
+                const SizedBox(height: 20),
+                const Align(
                   alignment: Alignment.centerLeft,
                   child: Text(
                     'Category',
@@ -71,7 +74,7 @@ class MainMenu extends StatelessWidget {
                     ),
                   ),
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
@@ -80,10 +83,10 @@ class MainMenu extends StatelessWidget {
                         height: 40,
                         width: 105,
                         decoration: BoxDecoration(
-                          color: Color(0xFFABA6A2),
+                          color: const Color(0xFFABA6A2),
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        child: Center(
+                        child: const Center(
                           child: Text(
                             'Baju Pria',
                             style: TextStyle(
@@ -93,15 +96,15 @@ class MainMenu extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(width: 15),
+                      const SizedBox(width: 15),
                       Container(
                         height: 40,
                         width: 105,
                         decoration: BoxDecoration(
-                          color: Color(0xFFABA6A2),
+                          color: const Color(0xFFABA6A2),
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        child: Center(
+                        child: const Center(
                           child: Text(
                             'Celana Pria',
                             style: TextStyle(
@@ -111,15 +114,15 @@ class MainMenu extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(width: 15),
+                      const SizedBox(width: 15),
                       Container(
                         height: 40,
                         width: 105,
                         decoration: BoxDecoration(
-                          color: Color(0xFFABA6A2),
+                          color: const Color(0xFFABA6A2),
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        child: Center(
+                        child: const Center(
                           child: Text(
                             'Jaket Pria',
                             style: TextStyle(
@@ -132,11 +135,11 @@ class MainMenu extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 25),
+                const SizedBox(height: 25),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
+                    const Text(
                       'Baju Pria',
                       style: TextStyle(
                         fontSize: 18,
@@ -144,8 +147,13 @@ class MainMenu extends StatelessWidget {
                       ),
                     ),
                     InkWell(
-                      onTap: () {},
-                      child: Text(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const CategoryDetails()));
+                      },
+                      child: const Text(
                         'Lihat Semua',
                         style: TextStyle(
                           fontSize: 18,
@@ -155,7 +163,7 @@ class MainMenu extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
@@ -171,7 +179,7 @@ class MainMenu extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(width: 10),
+                      const SizedBox(width: 10),
                       InkWell(
                         onTap: () {},
                         child: Container(
@@ -183,7 +191,7 @@ class MainMenu extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(width: 10),
+                      const SizedBox(width: 10),
                       InkWell(
                         onTap: () {},
                         child: Container(
@@ -195,7 +203,7 @@ class MainMenu extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(width: 10),
+                      const SizedBox(width: 10),
                       InkWell(
                         onTap: () {},
                         child: Container(
@@ -210,11 +218,11 @@ class MainMenu extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
+                    const Text(
                       'Celana Pria',
                       style: TextStyle(
                         fontSize: 18,
@@ -223,7 +231,7 @@ class MainMenu extends StatelessWidget {
                     ),
                     InkWell(
                       onTap: () {},
-                      child: Text(
+                      child: const Text(
                         'Lihat Semua',
                         style: TextStyle(
                           fontSize: 18,
@@ -233,7 +241,7 @@ class MainMenu extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
@@ -249,7 +257,7 @@ class MainMenu extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(width: 10),
+                      const SizedBox(width: 10),
                       InkWell(
                         onTap: () {},
                         child: Container(
@@ -261,7 +269,7 @@ class MainMenu extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(width: 10),
+                      const SizedBox(width: 10),
                       InkWell(
                         onTap: () {},
                         child: Container(
@@ -273,7 +281,7 @@ class MainMenu extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(width: 10),
+                      const SizedBox(width: 10),
                       InkWell(
                         onTap: () {},
                         child: Container(
@@ -288,11 +296,11 @@ class MainMenu extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text(
+                    const Text(
                       'Jaket Pria',
                       style: TextStyle(
                         fontSize: 18,
@@ -301,7 +309,7 @@ class MainMenu extends StatelessWidget {
                     ),
                     InkWell(
                       onTap: () {},
-                      child: Text(
+                      child: const Text(
                         'Lihat Semua',
                         style: TextStyle(
                           fontSize: 18,
@@ -311,7 +319,7 @@ class MainMenu extends StatelessWidget {
                     ),
                   ],
                 ),
-                SizedBox(height: 10),
+                const SizedBox(height: 10),
                 SingleChildScrollView(
                   scrollDirection: Axis.horizontal,
                   child: Row(
@@ -327,7 +335,7 @@ class MainMenu extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(width: 10),
+                      const SizedBox(width: 10),
                       InkWell(
                         onTap: () {},
                         child: Container(
@@ -339,7 +347,7 @@ class MainMenu extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(width: 10),
+                      const SizedBox(width: 10),
                       InkWell(
                         onTap: () {},
                         child: Container(
@@ -351,7 +359,7 @@ class MainMenu extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(width: 10),
+                      const SizedBox(width: 10),
                       InkWell(
                         onTap: () {},
                         child: Container(
@@ -366,6 +374,7 @@ class MainMenu extends StatelessWidget {
                     ],
                   ),
                 ),
+                SizedBox(height: 15),
               ],
             ),
           ),
