@@ -3,6 +3,7 @@ import 'package:clothing_reference_app/searchpage.dart';
 import 'package:clothing_reference_app/mainMenu.dart';
 import 'package:clothing_reference_app/signIn.dart';
 import 'package:clothing_reference_app/signUp.dart';
+
 import 'package:flutter/material.dart';
 
 void main() {
