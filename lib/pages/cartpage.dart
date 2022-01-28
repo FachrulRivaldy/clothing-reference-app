@@ -46,6 +46,36 @@ class CartPage extends StatelessWidget {
               shrinkWrap: true,
               children: const [CartCard()],
             ),
+          ),
+          Spacer(),
+          Container(
+            height: 70,
+            width: MediaQuery.of(context).size.width,
+            color: Color(0xFFABA6A2),
+            child: Padding(
+              padding: const EdgeInsets.only(left: 30, right: 30),
+              child: Row(
+                children: [
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const [
+                      Text("Subtotal"),
+                      Text(
+                        "Harga Barang",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      )
+                    ],
+                  ),
+                  const Spacer(),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(primary: Color(0xFF2F2E2C)),
+                    child: Text("Checkout"),
+                    onPressed: () {},
+                  )
+                ],
+              ),
+            ),
           )
         ]));
   }
