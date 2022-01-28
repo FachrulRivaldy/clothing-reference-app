@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:clothing_reference_app/data/templates.dart';
 
 class CartPage extends StatelessWidget {
   const CartPage({Key? key}) : super(key: key);
@@ -29,14 +30,23 @@ class CartPage extends StatelessWidget {
             ),
           ),
         ),
-        body: Center(
-          child: Column(children: [
-            const Text("Your Cart",
+        body: Column(children: [
+          const Align(
+            alignment: Alignment.center,
+            child: Text("Your Cart",
                 style: TextStyle(
                     color: Colors.black,
                     fontWeight: FontWeight.w900,
                     fontSize: 24)),
-          ]),
-        ));
+          ),
+          //const SizedBox(height: 15),
+          Padding(
+            padding: const EdgeInsets.only(top: 15, right: 30, left: 30),
+            child: ListView(
+              shrinkWrap: true,
+              children: const [CartCard()],
+            ),
+          )
+        ]));
   }
 }
