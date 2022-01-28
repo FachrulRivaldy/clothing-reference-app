@@ -99,6 +99,7 @@ class CartCard extends StatefulWidget {
 
 class _CartCardState extends State<CartCard> {
   bool isChecked = false;
+  int noItems = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -170,7 +171,7 @@ class _CartCardState extends State<CartCard> {
                               onTap: () {},
                             ),
                             const SizedBox(
-                              width: 15,
+                              width: 30,
                             ),
                           ],
                         )
