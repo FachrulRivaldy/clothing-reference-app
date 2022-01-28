@@ -1,3 +1,4 @@
+
 import 'package:clothing_reference_app/pages/cartpage.dart';
 import 'package:clothing_reference_app/pages/categorydetails.dart';
 import 'package:clothing_reference_app/pages/profilepage.dart';
@@ -5,6 +6,7 @@ import 'package:clothing_reference_app/pages/searchpage.dart';
 import 'package:clothing_reference_app/pages/mainMenu.dart';
 import 'package:clothing_reference_app/pages/signIn.dart';
 import 'package:clothing_reference_app/pages/signUp.dart';
+
 import 'package:flutter/material.dart';
 
 void main() {
