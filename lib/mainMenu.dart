@@ -366,6 +366,7 @@ class MainMenu extends StatelessWidget {
                     ],
                   ),
                 ),
+                SizedBox(height: 15),
               ],
             ),
           ),
