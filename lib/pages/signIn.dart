@@ -1,6 +1,7 @@
 // ignore_for_file: file_names, prefer_const_constructors
 
-import 'package:clothing_reference_app/pages/mainMenu.dart';
+import 'package:clothing_reference_app/pages/mainpage.dart';
+import 'package:clothing_reference_app/pages/signUp.dart';
 import 'package:flutter/material.dart';
 
 class SignIn extends StatelessWidget {
@@ -75,7 +76,7 @@ class SignIn extends StatelessWidget {
                 //Sign In button
                 onTap: () {
                   Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => MainMenu()));
+                      MaterialPageRoute(builder: (context) => MainPage()));
                 },
                 child: Container(
                   width: MediaQuery.of(context).size.width,
@@ -126,7 +127,10 @@ class SignIn extends StatelessWidget {
                     ),
                   ),
                   InkWell(
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => signUp()));
+                    },
                     child: const Text(
                       'Register Here',
                       style: TextStyle(
