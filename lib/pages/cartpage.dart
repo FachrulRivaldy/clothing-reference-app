@@ -36,18 +36,25 @@ class CartPage extends StatelessWidget {
             child: Text("Your Cart",
                 style: TextStyle(
                     color: Colors.black,
-                    fontWeight: FontWeight.w900,
+                    fontWeight: FontWeight.bold,
                     fontSize: 24)),
           ),
           //const SizedBox(height: 15),
-          Padding(
-            padding: const EdgeInsets.only(top: 15, right: 30, left: 30),
-            child: ListView(
-              shrinkWrap: true,
-              children: const [CartCard()],
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.only(top: 15, right: 30, left: 30),
+              child: ListView(
+                shrinkWrap: true,
+                children: const [
+                  CartCard(),
+                  CartCard(),
+                  CartCard(),
+                  CartCard(),
+                ],
+              ),
             ),
           ),
-          Spacer(),
+          //Spacer(),
           Container(
             height: 70,
             width: MediaQuery.of(context).size.width,
@@ -55,6 +62,7 @@ class CartPage extends StatelessWidget {
             child: Padding(
               padding: const EdgeInsets.only(left: 30, right: 30),
               child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -67,7 +75,7 @@ class CartPage extends StatelessWidget {
                       )
                     ],
                   ),
-                  const Spacer(),
+                  //const Spacer(),
                   ElevatedButton(
                     style: ElevatedButton.styleFrom(primary: Color(0xFF2F2E2C)),
                     child: Text("Checkout"),
