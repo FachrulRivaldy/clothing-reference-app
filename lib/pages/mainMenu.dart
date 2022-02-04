@@ -1,13 +1,6 @@
 // ignore_for_file: file_names, sized_box_for_whitespace
 
-// import 'package:clothing_reference_app/data/navbar.dart';
-import 'package:clothing_reference_app/pages/cartpage.dart';
 import 'package:clothing_reference_app/pages/categorydetails.dart';
-import 'package:clothing_reference_app/pages/detailpage.dart';
-import 'package:clothing_reference_app/pages/favoritepage.dart';
-import 'package:clothing_reference_app/pages/profilepage.dart';
-import 'package:clothing_reference_app/pages/searchpage.dart';
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
 class MainMenu extends StatefulWidget {
