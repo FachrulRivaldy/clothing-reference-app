@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:clothing_reference_app/data/templates.dart';
 
 class CartPage extends StatelessWidget {
   const CartPage({Key? key}) : super(key: key);
@@ -29,14 +30,61 @@ class CartPage extends StatelessWidget {
             ),
           ),
         ),
-        body: Center(
-          child: Column(children: [
-            const Text("Your Cart",
+        body: Column(children: [
+          const Align(
+            alignment: Alignment.center,
+            child: Text("Your Cart",
                 style: TextStyle(
                     color: Colors.black,
-                    fontWeight: FontWeight.w900,
+                    fontWeight: FontWeight.bold,
                     fontSize: 24)),
-          ]),
-        ));
+          ),
+          //const SizedBox(height: 15),
+          Expanded(
+            child: Padding(
+              padding: const EdgeInsets.only(top: 15, right: 30, left: 30),
+              child: ListView(
+                shrinkWrap: true,
+                children: const [
+                  CartCard(),
+                  CartCard(),
+                  CartCard(),
+                  CartCard(),
+                ],
+              ),
+            ),
+          ),
+          //Spacer(),
+          Container(
+            height: 70,
+            width: MediaQuery.of(context).size.width,
+            color: Color(0xFFABA6A2),
+            child: Padding(
+              padding: const EdgeInsets.only(left: 30, right: 30),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: const [
+                      Text("Subtotal"),
+                      Text(
+                        "Harga Barang",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      )
+                    ],
+                  ),
+                  //const Spacer(),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(primary: Color(0xFF2F2E2C)),
+                    child: Text("Checkout"),
+                    onPressed: () {},
+                  )
+                ],
+              ),
+            ),
+          )
+        ]));
   }
 }

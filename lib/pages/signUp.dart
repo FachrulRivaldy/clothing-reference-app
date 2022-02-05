@@ -1,6 +1,6 @@
 // ignore_for_file: file_names, camel_case_types, sized_box_for_whitespace
 
-import 'package:clothing_reference_app/pages/mainMenu.dart';
+import 'package:clothing_reference_app/pages/mainpage.dart';
 import 'package:clothing_reference_app/pages/signIn.dart';
 import 'package:flutter/material.dart';
 
@@ -140,7 +140,7 @@ class _signUpState extends State<signUp> {
                       Navigator.push(
                           context,
                           MaterialPageRoute(
-                              builder: (context) => const SignIn()));
+                              builder: (context) => const MainPage()));
                     },
                     child: Container(
                       width: MediaQuery.of(context).size.width,
@@ -175,7 +175,10 @@ class _signUpState extends State<signUp> {
                       ),
                       InkWell(
                         onTap: () {
-                          Navigator.pop(context);
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => SignIn()));
                         },
                         child: const Text(
                           'Login Here',
