@@ -3,6 +3,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:clothing_reference_app/pages/categorydetails.dart';
 import 'package:flutter/material.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class MainMenu extends StatefulWidget {
   const MainMenu({Key? key}) : super(key: key);
@@ -37,41 +38,9 @@ class _MainMenuState extends State<MainMenu> {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
-                  child: Row(
-                    //News
-                    children: [
-                      Container(
-                        height: 130,
-                        width: 250,
-                        decoration: BoxDecoration(
-                          color: Colors.grey,
-                          borderRadius: BorderRadius.circular(15),
-                        ),
-                      ),
-                      const SizedBox(width: 20),
-                      Container(
-                        height: 130,
-                        width: 250,
-                        decoration: BoxDecoration(
-                          color: Colors.grey,
-                          borderRadius: BorderRadius.circular(15),
-                        ),
-                      ),
-                      const SizedBox(width: 20),
-                      Container(
-                        height: 130,
-                        width: 250,
-                        decoration: BoxDecoration(
-                          color: Colors.grey,
-                          borderRadius: BorderRadius.circular(15),
-                        ),
-                      )
-                    ],
-                  ),
-                ),
-                const SizedBox(height: 20),
+                //news
+                const newsAPP(),
+                const SizedBox(height: 10),
                 const Align(
                   //kategori
                   alignment: Alignment.centerLeft,
@@ -85,9 +54,9 @@ class _MainMenuState extends State<MainMenu> {
                 ),
                 const SizedBox(height: 10),
                 SingleChildScrollView(
+                  //kumpulan kategori
                   scrollDirection: Axis.horizontal,
                   child: Row(
-                    //kumpulan kategori
                     children: const [
                       categoryClothing(categorylist: 'Baju Pria'),
                       categoryClothing(categorylist: 'Celana Pria'),
@@ -153,6 +122,12 @@ class newsAPP extends StatefulWidget {
 class _newsAPPState extends State<newsAPP> {
   int activeIndex = 0;
 
+  final images = [
+    'assets/images/ads/frame1.jpg',
+    'assets/images/ads/frame2.png',
+    'assets/images/ads/frame3.png',
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Center(
@@ -160,14 +135,48 @@ class _newsAPPState extends State<newsAPP> {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          CarouselSlider(
+          CarouselSlider.builder(
             options: CarouselOptions(
-                height: 160,
+                height: 180,
+                autoPlay: true,
+                autoPlayInterval: const Duration(seconds: 15),
+                enlargeCenterPage: true,
+                enlargeStrategy: CenterPageEnlargeStrategy.scale,
                 onPageChanged: (index, reason) =>
                     setState(() => activeIndex = index)),
-            items: [],
+            itemCount: images.length,
+            itemBuilder: (context, index, realIndex) {
+              final image = images[index];
+              return buildImage(image, index);
+            },
           ),
+          const SizedBox(height: 15),
+          indicator(),
         ],
+      ),
+    );
+  }
+
+//Image yang akan ditampilkan di carousel
+  Widget buildImage(String imageUrl, int index) {
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(15),
+      child: Image.asset(
+        imageUrl,
+        fit: BoxFit.fill,
+      ),
+    );
+  }
+
+  Widget indicator() {
+    return AnimatedSmoothIndicator(
+      activeIndex: activeIndex,
+      count: images.length,
+      effect: const WormEffect(
+        dotHeight: 10,
+        dotWidth: 10,
+        activeDotColor: Color(0xFF2F2E2C),
+        dotColor: Color(0xFFABA6A2),
       ),
     );
   }
