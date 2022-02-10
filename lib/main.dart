@@ -7,6 +7,7 @@ import 'package:clothing_reference_app/pages/searchpage.dart';
 import 'package:clothing_reference_app/pages/mainMenu.dart';
 import 'package:clothing_reference_app/pages/signIn.dart';
 import 'package:clothing_reference_app/pages/signUp.dart';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -21,7 +22,7 @@ class ClothRefApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Clothing_Marketplace',
-      home: const OnboardingPage(),
+      home: MainMenu(),
     );
   }
 }
