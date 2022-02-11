@@ -35,9 +35,12 @@ class OnboardingPage extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: IntroductionScreen(
+          showSkipButton: true,
+          showNextButton: true,
           done: const Text("Done"),
           onDone: () => introEnd(context),
           pages: getPages(),
+          skip: const Icon(Icons.arrow_forward),
           next: const Icon(Icons.arrow_forward),
         ),
       ),
