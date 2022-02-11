@@ -1,5 +1,6 @@
 import 'package:clothing_reference_app/pages/cartpage.dart';
 import 'package:clothing_reference_app/pages/categorydetails.dart';
+import 'package:clothing_reference_app/pages/detailpage.dart';
 import 'package:clothing_reference_app/pages/mainpage.dart';
 import 'package:clothing_reference_app/pages/onboardingpage.dart';
 import 'package:clothing_reference_app/pages/profilepage.dart';
@@ -22,7 +23,7 @@ class ClothRefApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Clothing_Marketplace',
-      home: MainMenu(),
+      home: DetailPage(),
     );
   }
 }
