@@ -139,7 +139,7 @@ class _newsAPPState extends State<newsAPP> {
             options: CarouselOptions(
                 height: 180,
                 autoPlay: true,
-                autoPlayInterval: const Duration(seconds: 15),
+                autoPlayInterval: const Duration(seconds: 10),
                 enlargeCenterPage: true,
                 enlargeStrategy: CenterPageEnlargeStrategy.scale,
                 onPageChanged: (index, reason) =>
@@ -157,7 +157,7 @@ class _newsAPPState extends State<newsAPP> {
     );
   }
 
-//Image yang akan ditampilkan di carousel
+  //Image yang akan ditampilkan di carousel
   Widget buildImage(String imageUrl, int index) {
     return ClipRRect(
       borderRadius: BorderRadius.circular(15),
