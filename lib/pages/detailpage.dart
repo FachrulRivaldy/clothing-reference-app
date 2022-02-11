@@ -1,4 +1,6 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class DetailPage extends StatefulWidget {
   const DetailPage({Key? key}) : super(key: key);
@@ -34,14 +36,8 @@ class _DetailPageState extends State<DetailPage> {
             child: Center(
               child: Column(
                 children: [
-                  Container(
-                    width: 200,
-                    height: 200,
-                    decoration: const BoxDecoration(
-                      color: Colors.brown,
-                    ),
-                  ),
-                  SizedBox(height: 10),
+                  const imageItem(),
+                  const SizedBox(height: 10),
                   Expanded(
                     child: Container(
                       decoration: const BoxDecoration(
@@ -99,7 +95,7 @@ class _DetailPageState extends State<DetailPage> {
                               ],
                             ),
                             Row(
-                              children: [
+                              children: const [
                                 Icon(Icons.star, size: 20),
                                 Icon(Icons.star, size: 20),
                                 Icon(Icons.star, size: 20),
@@ -190,6 +186,71 @@ class _DetailPageState extends State<DetailPage> {
         backgroundColor: Color(0xFF2F2E2C),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+    );
+  }
+}
+
+//Carousel Image
+class imageItem extends StatefulWidget {
+  const imageItem({Key? key}) : super(key: key);
+
+  @override
+  _imageItemState createState() => _imageItemState();
+}
+
+class _imageItemState extends State<imageItem> {
+  int activeIndex = 0;
+  final images = [
+    'assets/images/KemejaPria/merah1.jpg',
+    'assets/images/KemejaPria/merah2.jpg',
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          CarouselSlider.builder(
+            options: CarouselOptions(
+                height: 300,
+                autoPlay: false,
+                onPageChanged: (index, reason) =>
+                    setState(() => activeIndex = index)),
+            itemCount: images.length,
+            itemBuilder: (context, index, realIndex) {
+              final image = images[index];
+              return buildImage(image, index);
+            },
+          ),
+          const SizedBox(height: 15),
+          indicator(),
+        ],
+      ),
+    );
+  }
+
+  //Image yang akan ditampilkan
+  Widget buildImage(String imageUrl, int index) {
+    return ClipRect(
+      child: Image.asset(
+        imageUrl,
+        fit: BoxFit.fill,
+      ),
+    );
+  }
+
+  Widget indicator() {
+    return AnimatedSmoothIndicator(
+      activeIndex: activeIndex,
+      count: images.length,
+      effect: const ScrollingDotsEffect(
+        dotHeight: 10,
+        dotWidth: 10,
+        activeDotColor: Color(0xFF2F2E2C),
+        dotColor: Color(0xFFABA6A2),
+      ),
     );
   }
 }
