@@ -49,120 +49,124 @@ class _DetailPageState extends State<DetailPage> {
                       ),
                       child: Padding(
                         padding: const EdgeInsets.all(30),
-                        child: Column(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Column(
-                                  mainAxisAlignment: MainAxisAlignment.start,
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      'NAMA BARANG',
-                                      style: TextStyle(
-                                        fontSize: 18,
-                                        fontWeight: FontWeight.w600,
+                        child: SingleChildScrollView(
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: [
+                                  Column(
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        'NAMA BARANG',
+                                        style: TextStyle(
+                                          fontSize: 18,
+                                          fontWeight: FontWeight.w600,
+                                        ),
                                       ),
-                                    ),
-                                    Text(
-                                      'KATEGORI',
-                                      style: TextStyle(
-                                        fontSize: 15,
-                                        fontWeight: FontWeight.w400,
+                                      Text(
+                                        'KATEGORI',
+                                        style: TextStyle(
+                                          fontSize: 15,
+                                          fontWeight: FontWeight.w400,
+                                        ),
                                       ),
-                                    ),
-                                  ],
-                                ),
-                                InkWell(
-                                  onTap: () {},
-                                  child: Container(
-                                    height: 46,
-                                    width: 46,
-                                    decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      color: Colors.black,
-                                    ),
-                                    child: Icon(
-                                      Icons.favorite,
-                                      color: Color(0xFFB7A599),
-                                    ),
+                                    ],
                                   ),
-                                )
-                              ],
-                            ),
-                            Row(
-                              children: const [
-                                Icon(Icons.star, size: 20),
-                                Icon(Icons.star, size: 20),
-                                Icon(Icons.star, size: 20),
-                                Icon(Icons.star, size: 20),
-                                Icon(Icons.star, size: 20),
-                                SizedBox(width: 5),
-                                Text(
-                                  '(1000 Reviews)',
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    fontWeight: FontWeight.w400,
-                                  ),
-                                ),
-                              ],
-                            ),
-                            SizedBox(height: 20),
-                            Container(
-                              height: 50,
-                              width: MediaQuery.of(context).size.width,
-                              decoration: BoxDecoration(
-                                color: Color(0xFF2F2E2C),
-                                borderRadius: BorderRadius.circular(4),
-                              ),
-                              child: Padding(
-                                padding: const EdgeInsets.all(16),
-                                child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Text(
-                                      'Price Starts From',
-                                      style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w400,
-                                        color: Colors.white,
+                                  InkWell(
+                                    onTap: () {},
+                                    child: Container(
+                                      height: 46,
+                                      width: 46,
+                                      decoration: BoxDecoration(
+                                        shape: BoxShape.circle,
+                                        color: Colors.black,
                                       ),
-                                    ),
-                                    Text(
-                                      'Rp100.000,-',
-                                      style: TextStyle(
-                                        fontSize: 16,
-                                        fontWeight: FontWeight.w400,
+                                      child: Icon(
+                                        Icons.favorite,
                                         color: Color(0xFFB7A599),
                                       ),
                                     ),
-                                  ],
+                                  )
+                                ],
+                              ),
+                              Row(
+                                children: const [
+                                  Icon(Icons.star, size: 20),
+                                  Icon(Icons.star, size: 20),
+                                  Icon(Icons.star, size: 20),
+                                  Icon(Icons.star, size: 20),
+                                  Icon(Icons.star, size: 20),
+                                  SizedBox(width: 5),
+                                  Text(
+                                    '(1000 Reviews)',
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.w400,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                              SizedBox(height: 20),
+                              Container(
+                                height: 50,
+                                width: MediaQuery.of(context).size.width,
+                                decoration: BoxDecoration(
+                                  color: Color(0xFF2F2E2C),
+                                  borderRadius: BorderRadius.circular(4),
+                                ),
+                                child: Padding(
+                                  padding: const EdgeInsets.all(16),
+                                  child: Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
+                                    children: [
+                                      Text(
+                                        'Price Starts From',
+                                        style: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w400,
+                                          color: Colors.white,
+                                        ),
+                                      ),
+                                      Text(
+                                        'Rp100.000,-',
+                                        style: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.w400,
+                                          color: Color(0xFFB7A599),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
                                 ),
                               ),
-                            ),
-                            SizedBox(height: 25),
-                            Text(
-                              'Description',
-                              style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.w600,
+                              SizedBox(height: 25),
+                              Text(
+                                'Description',
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w600,
+                                ),
                               ),
-                            ),
-                            SizedBox(height: 12),
-                            Text(
-                              'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
-                              textAlign: TextAlign.justify,
-                              style: TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.w400,
+                              SizedBox(height: 12),
+                              Text(
+                                'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
+                                textAlign: TextAlign.justify,
+                                style: TextStyle(
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w400,
+                                ),
                               ),
-                            ),
-                          ],
+                            ],
+                          ),
                         ),
                       ),
                     ),
