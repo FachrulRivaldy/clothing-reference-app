@@ -20,7 +20,7 @@ class _DetailPageState extends State<DetailPage> {
           onTap: () {
             Navigator.pop(context);
           },
-          child: Icon(
+          child: const Icon(
             Icons.arrow_back_ios,
             size: 25,
             color: Colors.black,
@@ -63,7 +63,7 @@ class _DetailPageState extends State<DetailPage> {
                                     mainAxisAlignment: MainAxisAlignment.start,
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
-                                    children: [
+                                    children: const [
                                       Text(
                                         'NAMA BARANG',
                                         style: TextStyle(
@@ -85,11 +85,11 @@ class _DetailPageState extends State<DetailPage> {
                                     child: Container(
                                       height: 46,
                                       width: 46,
-                                      decoration: BoxDecoration(
+                                      decoration: const BoxDecoration(
                                         shape: BoxShape.circle,
                                         color: Colors.black,
                                       ),
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.favorite,
                                         color: Color(0xFFB7A599),
                                       ),
@@ -127,7 +127,7 @@ class _DetailPageState extends State<DetailPage> {
                                   child: Row(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
-                                    children: [
+                                    children: const [
                                       Text(
                                         'Price Starts From',
                                         style: TextStyle(
@@ -148,16 +148,16 @@ class _DetailPageState extends State<DetailPage> {
                                   ),
                                 ),
                               ),
-                              SizedBox(height: 25),
-                              Text(
+                              const SizedBox(height: 25),
+                              const Text(
                                 'Description',
                                 style: TextStyle(
                                   fontSize: 18,
                                   fontWeight: FontWeight.w600,
                                 ),
                               ),
-                              SizedBox(height: 12),
-                              Text(
+                              const SizedBox(height: 12),
+                              const Text(
                                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum',
                                 textAlign: TextAlign.justify,
                                 style: TextStyle(
