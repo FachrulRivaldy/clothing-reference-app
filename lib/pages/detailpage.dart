@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types
+
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -29,7 +31,8 @@ class _DetailPageState extends State<DetailPage> {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: EdgeInsets.only(top: 5),
+          padding: const EdgeInsets.only(top: 5),
+          // ignore: sized_box_for_whitespace
           child: Container(
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height,
@@ -114,12 +117,12 @@ class _DetailPageState extends State<DetailPage> {
                                   ),
                                 ],
                               ),
-                              SizedBox(height: 20),
+                              const SizedBox(height: 20),
                               Container(
                                 height: 50,
                                 width: MediaQuery.of(context).size.width,
                                 decoration: BoxDecoration(
-                                  color: Color(0xFF2F2E2C),
+                                  color: const Color(0xFF2F2E2C),
                                   borderRadius: BorderRadius.circular(4),
                                 ),
                                 child: Padding(
@@ -187,7 +190,7 @@ class _DetailPageState extends State<DetailPage> {
             fontWeight: FontWeight.w600,
           ),
         ),
-        backgroundColor: Color(0xFF2F2E2C),
+        backgroundColor: const Color(0xFF2F2E2C),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );
