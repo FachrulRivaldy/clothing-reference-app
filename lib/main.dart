@@ -20,10 +20,10 @@ class ClothRefApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Clothing_Marketplace',
-      home: DetailPage(),
+      home: MainPage(),
     );
   }
 }

@@ -17,12 +17,12 @@ class _MainPageState extends State<MainPage> {
   final navigationKey = GlobalKey<CurvedNavigationBarState>();
   int index = 0;
 
-  final screens = const [
-    MainMenu(),
-    FavoritePage(),
-    SearchTabBar(),
+  final screens = [
+    const MainMenu(),
+    const FavoritePage(),
+    const SearchTabBar(),
     CartPage(),
-    ProfilePage(),
+    const ProfilePage(),
   ];
 
   @override
@@ -38,7 +38,7 @@ class _MainPageState extends State<MainPage> {
     return Scaffold(
       // appBar: ,
       body: screens[index],
-      // extendBody: true,
+      //extendBody: true,
       bottomNavigationBar: CurvedNavigationBar(
         key: navigationKey,
         buttonBackgroundColor: const Color(0xFFB7A599),
