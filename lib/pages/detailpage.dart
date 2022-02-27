@@ -29,7 +29,6 @@ class _DetailPageState extends State<DetailPage> {
             color: Colors.black,
           ),
         ),
-
         title: Container(),
         headerExpandedHeight: 0.4,
         headerWidget: Container(
@@ -76,11 +75,6 @@ class _DetailPageState extends State<DetailPage> {
                                   ),
                                 ],
                               ),
-
-
-                                  ),
-                                ),
-                              )
                             ],
                           ),
                           Row(
