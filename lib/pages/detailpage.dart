@@ -1,3 +1,5 @@
+// ignore_for_file: camel_case_types
+
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:draggable_home/draggable_home.dart';
 import 'package:flutter/material.dart';
@@ -27,13 +29,7 @@ class _DetailPageState extends State<DetailPage> {
             color: Colors.black,
           ),
         ),
-<<<<<<< Updated upstream
-      ),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: EdgeInsets.only(top: 5),
-          child: Container(
-=======
+
         title: Container(),
         headerExpandedHeight: 0.4,
         headerWidget: Container(
@@ -44,7 +40,6 @@ class _DetailPageState extends State<DetailPage> {
         ),
         body: [
           Container(
->>>>>>> Stashed changes
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height,
             child: Center(
@@ -81,52 +76,8 @@ class _DetailPageState extends State<DetailPage> {
                                   ),
                                 ],
                               ),
-<<<<<<< Updated upstream
-                              SizedBox(height: 20),
-                              Container(
-                                height: 50,
-                                width: MediaQuery.of(context).size.width,
-                                decoration: BoxDecoration(
-                                  color: Color(0xFF2F2E2C),
-                                  borderRadius: BorderRadius.circular(4),
-                                ),
-                                child: Padding(
-                                  padding: const EdgeInsets.all(16),
-                                  child: Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceBetween,
-                                    children: const [
-                                      Text(
-                                        'Price Starts From',
-                                        style: TextStyle(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.w400,
-                                          color: Colors.white,
-                                        ),
-                                      ),
-                                      Text(
-                                        'Rp100.000,-',
-                                        style: TextStyle(
-                                          fontSize: 16,
-                                          fontWeight: FontWeight.w400,
-                                          color: Color(0xFFB7A599),
-                                        ),
-                                      ),
-                                    ],
-=======
-                              InkWell(
-                                onTap: () {},
-                                child: Container(
-                                  height: 46,
-                                  width: 46,
-                                  decoration: const BoxDecoration(
-                                    shape: BoxShape.circle,
-                                    color: Colors.black,
-                                  ),
-                                  child: const Icon(
-                                    Icons.favorite,
-                                    color: Color(0xFFB7A599),
->>>>>>> Stashed changes
+
+
                                   ),
                                 ),
                               )
@@ -220,7 +171,7 @@ class _DetailPageState extends State<DetailPage> {
             fontWeight: FontWeight.w600,
           ),
         ),
-        backgroundColor: Color(0xFF2F2E2C),
+        backgroundColor: const Color(0xFF2F2E2C),
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
     );

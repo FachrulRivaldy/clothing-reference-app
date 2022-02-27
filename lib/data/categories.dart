@@ -1,382 +1,108 @@
-import 'package:flutter/material.dart';
+class Products {
+  final String productName;
+  final String productDesc;
+  final String storeName;
+  final String productImage;
+  final int productPrize;
 
-List bajuPria = [
-  {
-    'name': '',
-    'category': '',
-    'stars': '4',
-    'price': '250,00',
-    'desc': '',
-    'image': 'assets/images/BajuPria/contoh1.png',
-  },
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
+  const Products({
+    required this.productName,
+    required this.productDesc,
+    required this.storeName,
+    required this.productImage,
+    required this.productPrize,
+  });
+}
+
+List<Products> bajuPria = const [
+  Products(
+    productName: "Baju Pria 1",
+    productDesc:
+        "Contoh Deskripsi Contoh Deskripsi Contoh Deskripsi Contoh Deskripsi Contoh Deskripsi Contoh Deskripsi Contoh Deskripsi Contoh Deskripsi Contoh Deskripsi Contoh Deskripsi ",
+    storeName: "Contoh Toko",
+    productPrize: 35000,
+    productImage: "/assets/images/BajuPria/contoh1.png",
+  )
 ];
-
-List celanaPria = [
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
+List<Products> celanaPria = const [
+  Products(
+    productName: "",
+    productDesc:
+        "Contoh Deskripsi Contoh Deskripsi Contoh Deskripsi Contoh Deskripsi Contoh Deskripsi Contoh Deskripsi Contoh Deskripsi Contoh Deskripsi Contoh Deskripsi Contoh Deskripsi ",
+    storeName: "Contoh Toko",
+    productPrize: 50000,
+    productImage: "/assets/images/BajuPria/contoh1.png",
+  )
 ];
-
-List jaketPria = [
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
+List<Products> jaketPria = const [
+  Products(
+    productName: "",
+    productDesc: "Contoh Deskripsi Contoh Deskripsi Contoh Deskripsi ",
+    storeName: "Contoh Toko",
+    productPrize: 50000,
+    productImage: "/assets/images/BajuPria/contoh1.png",
+  )
 ];
-
-List kemejaPria = [
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
+List<Products> kemejaPria = const [
+  Products(
+    productName: "",
+    productDesc: "Contoh Deskripsi Contoh Deskripsi Contoh Deskripsi ",
+    storeName: "Contoh Toko",
+    productPrize: 50000,
+    productImage: "/assets/images/BajuPria/contoh1.png",
+  )
 ];
-
-List sweater = [
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
+List<Products> sweater = const [
+  Products(
+    productName: "",
+    productDesc: "Contoh Deskripsi Contoh Deskripsi Contoh Deskripsi ",
+    storeName: "Contoh Toko",
+    productPrize: 50000,
+    productImage: "/assets/images/BajuPria/contoh1.png",
+  )
 ];
-
-List bajuWanita = [
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
+List<Products> bajuWanita = const [
+  Products(
+    productName: "",
+    productDesc: "Contoh Deskripsi Contoh Deskripsi Contoh Deskripsi ",
+    storeName: "Contoh Toko",
+    productPrize: 50000,
+    productImage: "/assets/images/BajuPria/contoh1.png",
+  )
 ];
-
-List kerudung = [
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
+List<Products> kerudung = const [
+  Products(
+    productName: "",
+    productDesc: "Contoh Deskripsi Contoh Deskripsi Contoh Deskripsi ",
+    storeName: "Contoh Toko",
+    productPrize: 50000,
+    productImage: "/assets/images/BajuPria/contoh1.png",
+  )
 ];
-
-List celanaWanita = [
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
+List<Products> celanaWanita = const [
+  Products(
+    productName: "",
+    productDesc: "Contoh Deskripsi Contoh Deskripsi Contoh Deskripsi ",
+    storeName: "Contoh Toko",
+    productPrize: 50000,
+    productImage: "/assets/images/BajuPria/contoh1.png",
+  )
 ];
-
-List rokWanita = [
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
+List<Products> rokWanita = const [
+  Products(
+    productName: "",
+    productDesc: "Contoh Deskripsi Contoh Deskripsi Contoh Deskripsi ",
+    storeName: "Contoh Toko",
+    productPrize: 50000,
+    productImage: "/assets/images/BajuPria/contoh1.png",
+  )
 ];
-
-List dress = [
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
-  {
-    'name': '',
-    'category': '',
-    'stars': '',
-    'price': '',
-    'desc': '',
-  },
+List<Products> dress = const [
+  Products(
+    productName: "",
+    productDesc: "Contoh Deskripsi Contoh Deskripsi Contoh Deskripsi ",
+    storeName: "Contoh Toko",
+    productPrize: 50000,
+    productImage: "/assets/images/BajuPria/contoh1.png",
+  )
 ];

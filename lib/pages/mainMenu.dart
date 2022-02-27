@@ -1,9 +1,10 @@
-// ignore_for_file: file_names, sized_box_for_whitespace
+// ignore_for_file: file_names, sized_box_for_whitespace, camel_case_types
 
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:clothing_reference_app/pages/categorydetails.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:clothing_reference_app/data/categories.dart';
 
 class MainMenu extends StatefulWidget {
   const MainMenu({Key? key}) : super(key: key);
@@ -227,7 +228,7 @@ class categoryTitle extends StatelessWidget {
         children: [
           Text(
             cattitle,
-            style: TextStyle(
+            style: const TextStyle(
               fontSize: 18,
               fontWeight: FontWeight.w700,
             ),

@@ -12,10 +12,10 @@ class _FavoritePageState extends State<FavoritePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color(0xFFFAFAFA),
+        backgroundColor: const Color(0xFFFAFAFA),
         elevation: 0,
         centerTitle: true,
-        title: Text(
+        title: const Text(
           'Your Favorite Items',
           style: TextStyle(
             fontSize: 25,
@@ -26,6 +26,7 @@ class _FavoritePageState extends State<FavoritePage> {
       ),
       body: Padding(
         padding: const EdgeInsets.only(left: 30, right: 30, top: 25),
+        // ignore: sized_box_for_whitespace
         child: Container(
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
@@ -36,7 +37,7 @@ class _FavoritePageState extends State<FavoritePage> {
                   width: MediaQuery.of(context).size.width,
                   height: 125,
                   decoration: BoxDecoration(
-                    color: Color(0xFFABA6A2),
+                    color: const Color(0xFFABA6A2),
                     borderRadius: BorderRadius.circular(15),
                   ),
                   child: Padding(
@@ -55,39 +56,39 @@ class _FavoritePageState extends State<FavoritePage> {
                                 borderRadius: BorderRadius.circular(15),
                               ),
                             ),
-                            SizedBox(width: 15),
+                            const SizedBox(width: 15),
                             Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
-                                Text(
+                                const Text(
                                   'Nama Item',
                                   style: TextStyle(
                                     fontSize: 16,
                                     fontWeight: FontWeight.w700,
                                   ),
                                 ),
-                                SizedBox(height: 5),
-                                Text(
+                                const SizedBox(height: 5),
+                                const Text(
                                   'Rp100.000,-',
                                   style: TextStyle(
                                     fontSize: 16,
                                     fontWeight: FontWeight.w700,
                                   ),
                                 ),
-                                SizedBox(height: 25),
+                                const SizedBox(height: 25),
                                 Row(
                                   mainAxisAlignment:
                                       MainAxisAlignment.spaceBetween,
                                   children: [
                                     GestureDetector(
                                       onTap: () {},
-                                      child: Icon(
+                                      child: const Icon(
                                         Icons.delete,
                                         size: 29,
                                       ),
                                     ),
-                                    SizedBox(width: 25),
+                                    const SizedBox(width: 25),
                                     InkWell(
                                       onTap: () {},
                                       child: Container(
@@ -98,7 +99,7 @@ class _FavoritePageState extends State<FavoritePage> {
                                           borderRadius:
                                               BorderRadius.circular(21),
                                         ),
-                                        child: Center(
+                                        child: const Center(
                                           child: Text(
                                             '+Add to Cart',
                                             style: TextStyle(

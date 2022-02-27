@@ -20,7 +20,8 @@ class _CategoryDetailsState extends State<CategoryDetails> {
           elevation: 0,
           leading: GestureDetector(
             onTap: () {
-              Navigator.pop(context);
+              Navigator.pop(context,
+                  MaterialPageRoute(builder: (context) => const MainMenu()));
             },
             child: const Icon(
               Icons.arrow_back_ios_new_rounded,
