@@ -34,7 +34,9 @@ dependencies:
   introduction_screen: ^2.1.0
   carousel_slider: ^4.0.0
   smooth_page_indicator: ^1.0.0+2
+
   intl: ^0.17.0
+  draggable_home: ^1.0.2
 
 dev_dependencies:
   flutter_lints: ^1.0.0
