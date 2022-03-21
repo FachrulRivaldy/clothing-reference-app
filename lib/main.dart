@@ -21,9 +21,26 @@ class ClothRefApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(primarySwatch: cream),
       debugShowCheckedModeBanner: false,
       title: 'Clothing_Marketplace',
-      home: MainPage(),
+      home: const DetailPage(),
     );
   }
 }
+
+const MaterialColor cream = MaterialColor(
+  0xFFABA6A2,
+  <int, Color>{
+    50: Color(0xFFABA6A2),
+    100: Color(0xFFABA6A2),
+    200: Color(0xFFABA6A2),
+    300: Color(0xFFABA6A2),
+    400: Color(0xFFABA6A2),
+    500: Color(0xFFABA6A2),
+    600: Color(0xFFABA6A2),
+    700: Color(0xFFABA6A2),
+    800: Color(0xFFABA6A2),
+    900: Color(0xFFABA6A2),
+  },
+);
